@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Hellsafe | Performance Engineering</title>
+
+    <!-- Dependencies -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-container": "#f9ba0b",
+                        "secondary": "#91d69f",
+                        "background": "#181309",
+                        "surface": "#181309",
+                        "on-surface-variant": "#d4c5ac",
+                        "on-surface": "#ede1d0"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-background text-on-surface font-sans selection:bg-primary-container selection:text-black">
+
+    <!-- Navigation -->
+    <nav
+        class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-zinc-950/80 backdrop-blur-md border-b border-zinc-800 transition-all duration-300">
+        <div class="text-2xl font-black italic tracking-tighter text-primary-container">Hellsafe</div>
+        <div class="hidden md:flex gap-8 items-center">
+            <a class="font-display uppercase tracking-widest text-[10px] font-bold text-primary-container border-b-2 border-primary-container pb-1"
+                href="#home">Home</a>
+            <a class="font-display uppercase tracking-widest text-[10px] font-bold text-zinc-400 hover:text-primary-container transition-all"
+                href="#products">Products</a>
+            <a class="font-display uppercase tracking-widest text-[10px] font-bold text-zinc-400 hover:text-primary-container transition-all"
+                href="#team">Team</a>
+            <a class="font-display uppercase tracking-widest text-[10px] font-bold text-zinc-400 hover:text-primary-container transition-all"
+                href="#notice">Notice</a>
+            <a class="font-display uppercase tracking-widest text-[10px] font-bold text-zinc-400 hover:text-primary-container transition-all"
+                href="#gallery">Gallery</a>
+            <a class="font-display uppercase tracking-widest text-[10px] font-bold text-zinc-400 hover:text-primary-container transition-all"
+                href="#contact">Contact</a>
+        </div>
+        <button
+            class="bg-primary-container text-black px-6 py-2 font-display text-[10px] font-black uppercase tracking-widest hover:bg-white transition-all">GET
+            GEAR</button>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="relative min-h-screen flex items-center justify-start px-8 pt-20 overflow-hidden reveal"
+            id="home">
+            <div class="absolute inset-0 z-0">
+                <img alt="Hero" class="w-full h-full object-cover brightness-50"
+                    src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=80">
+                <div class="absolute inset-0 bg-gradient-to-r from-background via-transparent to-transparent"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl">
+                <div class="flex items-center gap-4 mb-4">
+                    <span class="w-12 h-px bg-primary-container"></span>
+                    <span
+                        class="font-display text-[10px] font-bold tracking-widest uppercase text-primary-container">Performance
+                        Engineering</span>
+                </div>
+                <h1 class="font-display text-6xl md:text-8xl font-black uppercase leading-[0.9] mb-8">Master the <span
+                        class="text-primary-container">Airflow.</span></h1>
+                <p class="text-on-surface-variant text-lg max-w-xl mb-10 leading-relaxed">
+                    Precision-engineered cooling systems designed for high-velocity environments. Experience the next
+                    evolution of thermal regulation.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <button
+                        class="px-8 py-4 bg-primary-container text-black font-display text-[10px] font-bold tracking-widest uppercase hover:brightness-110 transition-all flex items-center gap-2">
+                        EXPLORE THE TECH <span class="material-symbols-outlined">trending_flat</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section class="py-32 bg-surface tech-grid border-y border-zinc-800 reveal" id="products">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-4">
+                    <div>
+                        <h2 class="font-display text-5xl text-white uppercase font-black mb-2">Technical Gear</h2>
+                        <p class="text-primary-container font-display text-[10px] font-bold tracking-widest uppercase">
+                            Advanced Thermal Management</p>
+                    </div>
+                    <div class="h-[1px] flex-grow mx-8 bg-zinc-800 hidden md:block"></div>
+                    <span class="font-display text-zinc-500 text-[10px] font-bold uppercase tracking-widest">01 / GEAR
+                        SERIES</span>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div
+                        class="group relative bg-zinc-950 border border-zinc-800 p-8 hover:border-primary-container transition-all">
+                        <div class="flex justify-between items-start mb-12">
+                            <h3 class="font-display text-2xl text-white font-bold uppercase">AeroVest Prime</h3>
+                            <span class="material-symbols-outlined text-primary-container">ac_unit</span>
+                        </div>
+                        <div class="relative h-80 mb-8 overflow-hidden bg-zinc-900">
+                            <img src="../png/hero_jacket.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60"
+                                alt="Jacket">
+                            <div class="absolute inset-0 airflow-gradient opacity-40"></div>
+                        </div>
+                        <p class="text-zinc-400 mb-8">Active micro-ventilation with integrated liquid cooling nodes.
+                            Engineered for track performance.</p>
+                        <button
+                            class="w-full py-3 border border-zinc-800 text-white font-display text-[10px] font-bold tracking-widest uppercase hover:bg-primary-container hover:text-black transition-all">VIEW
+                            SPECIFICATIONS</button>
+                    </div>
+                    <div
+                        class="group relative bg-zinc-950 border border-zinc-800 p-8 hover:border-secondary transition-all">
+                        <div class="flex justify-between items-start mb-12">
+                            <h3 class="font-display text-2xl text-white font-bold uppercase">Vortex Intake</h3>
+                            <span class="material-symbols-outlined text-secondary">air</span>
+                        </div>
+                        <div class="relative h-80 mb-8 overflow-hidden bg-zinc-900">
+                            <img src="../png/air_device.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000 opacity-60"
+                                alt="Intake">
+                            <div class="absolute inset-0 airflow-gradient opacity-40"></div>
+                        </div>
+                        <p class="text-zinc-400 mb-8">High-velocity intake module that mounts directly to the trellis
+                            frame. Maximizes air pressure.</p>
+                        <button
+                            class="w-full py-3 border border-zinc-800 text-white font-display text-[10px] font-bold tracking-widest uppercase hover:bg-secondary hover:text-black transition-all">EXPLORE
+                            COMPATIBILITY</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team -->
+        <section class="py-32 px-6 reveal" id="team">
+            <div class="container mx-auto">
+                <div class="text-center mb-24">
+                    <span
+                        class="font-display text-primary-container tracking-[0.4em] text-[10px] font-bold uppercase block mb-4">The
+                        Collective</span>
+                    <h2 class="font-display text-5xl text-white font-black uppercase">Engineered by Speed</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Member 1 -->
+                    <div class="group reveal">
+                        <div class="relative aspect-[4/5] mb-8 overflow-hidden bg-zinc-800">
+                            <img src="../png/team_photo.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                alt="Marcus">
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary-container text-black">
+                                <p class="font-display text-[10px] font-bold uppercase tracking-widest">CHIEF DESIGNER
+                                </p>
+                            </div>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold uppercase">Marcus Thorne</h4>
+                    </div>
+                    <!-- Member 2 -->
+                    <div class="group reveal" style="transition-delay: 0.1s">
+                        <div class="relative aspect-[4/5] mb-8 overflow-hidden bg-zinc-800">
+                            <img src="../png/team_photo.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                alt="Elena">
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary-container text-black">
+                                <p class="font-display text-[10px] font-bold uppercase tracking-widest">AERO SPECIALIST
+                                </p>
+                            </div>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold uppercase">Dr. Elena Chen</h4>
+                    </div>
+                    <!-- Member 3 -->
+                    <div class="group reveal" style="transition-delay: 0.2s">
+                        <div class="relative aspect-[4/5] mb-8 overflow-hidden bg-zinc-800">
+                            <img src="../png/team_photo.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                alt="Jaxson">
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary-container text-black">
+                                <p class="font-display text-[10px] font-bold uppercase tracking-widest">CHIEF TEST PILOT
+                                </p>
+                            </div>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold uppercase">Jaxson Vane</h4>
+                    </div>
+                    <!-- Member 4 -->
+                    <div class="group reveal" style="transition-delay: 0.3s">
+                        <div class="relative aspect-[4/5] mb-8 overflow-hidden bg-zinc-800">
+                            <img src="../png/team_photo.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                                alt="Sofia">
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform bg-primary-container text-black">
+                                <p class="font-display text-[10px] font-bold uppercase tracking-widest">HARDWARE
+                                    ARCHITECT</p>
+                            </div>
+                        </div>
+                        <h4 class="font-display text-xl text-white font-bold uppercase">Sofia Ricci</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section class="py-32 bg-zinc-950 px-6 reveal" id="gallery">
+            <div class="container mx-auto">
+                <div class="flex justify-between items-center mb-16">
+                    <h2 class="font-display text-5xl text-white font-black uppercase">In Motion</h2>
+                    <div class="flex gap-2">
+                        <button
+                            class="w-10 h-10 border border-zinc-800 flex items-center justify-center hover:bg-primary-container hover:text-black transition-all">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </button>
+                        <button
+                            class="w-10 h-10 border border-zinc-800 flex items-center justify-center hover:bg-primary-container hover:text-black transition-all">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="aspect-square overflow-hidden bg-zinc-900 group">
+                        <img alt="Gallery 1"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            src="../png/gallery_rider.png">
+                    </div>
+                    <div class="aspect-square md:col-span-2 md:row-span-2 overflow-hidden bg-zinc-900 group">
+                        <img alt="Gallery 2"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            src="../png/jacket_detail.png">
+                    </div>
+                    <div class="aspect-square overflow-hidden bg-zinc-900 group">
+                        <img alt="Gallery 3"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            src="../png/hero_jacket.png">
+                    </div>
+                    <div class="aspect-square overflow-hidden bg-zinc-900 group">
+                        <img alt="Gallery 4"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            src="../png/air_device.png">
+                    </div>
+                    <div class="aspect-square overflow-hidden bg-zinc-900 group">
+                        <img alt="Gallery 5"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                            src="../png/hero_jacket.png">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="py-32 px-6 reveal" id="contact">
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+                <div>
+                    <h2 class="font-display text-6xl text-white font-black uppercase mb-8 leading-tight">Get In
+                        <br><span class="text-primary-container">Touch.</span>
+                    </h2>
+                    <p class="text-zinc-400 text-lg mb-12">Partner with us for fleet integration or inquire about custom
+                        performance kits. Our team is ready.</p>
+                </div>
+                <form class="bg-zinc-900 border border-zinc-800 p-12 space-y-8">
+                    <input type="text" placeholder="NAME"
+                        class="w-full bg-transparent border-0 border-b border-zinc-800 focus:border-primary-container text-sm py-4 outline-none">
+                    <input type="email" placeholder="EMAIL"
+                        class="w-full bg-transparent border-0 border-b border-zinc-800 focus:border-primary-container text-sm py-4 outline-none">
+                    <textarea placeholder="MESSAGE" rows="4"
+                        class="w-full bg-transparent border-0 border-b border-zinc-800 focus:border-primary-container text-sm py-4 outline-none"></textarea>
+                    <button
+                        class="w-full bg-primary-container text-black font-display text-[10px] font-bold uppercase tracking-[0.3em] py-5 hover:brightness-110">Initialize
+                        Contact</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer
+        class="py-16 border-t border-zinc-800 text-center text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
+        © 2026 HELLSAFE PERFORMANCE ENGINEERING. ALL RIGHTS RESERVED.
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
