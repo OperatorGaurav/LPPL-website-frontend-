@@ -41,24 +41,19 @@
 
 /* Technical HUD Hover Effect */
 .group:hover img {
-    filter: brightness(0.4) sepia(1) hue-rotate(10deg);
+    filter: brightness(1.1);
 }
 .group::after {
-    content: 'SCANNING...';
+    content: '';
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f9ba0b;
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 10px;
-    letter-spacing: 4px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    inset: 0;
+    border: 1px solid rgba(249, 186, 11, 0);
+    transition: all 0.3s;
     pointer-events: none;
 }
 .group:hover::after {
-    opacity: 1;
+    border: 1px solid rgba(249, 186, 11, 0.5);
+    box-shadow: inset 0 0 20px rgba(249, 186, 11, 0.2);
 }
 
 /* Custom Scrollbar */
